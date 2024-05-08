@@ -1,21 +1,14 @@
 .parallax {
   position: absolute;
   width: 105%;
-  height: 100vh; 
-  background-image: url("../../assets/images/BoyJoe.png"); 
-  background-size: 60vh auto; 
-  animation: shake-lr 17s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;  
-  background-repeat: no-repeat; 
-  background-position: 75% 30%; 
-}   
-@keyframes scale-in-center {
-  0% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1.1);
-  }
+  height: 100vh;
+  background-image: url("../../assets/images/BoyJoe.png");
+  background-size: 50vh auto;
+  animation: shake-lr 17s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+  background-repeat: no-repeat;
+  background-position: 75% 30%;
 }
+
 .pulsate {
   position: absolute;
   width: 100%;
@@ -36,22 +29,17 @@
 }
 
 @keyframes shake-lr {
-  0%,
-  100% {
+  0%, 100% {
     transform: rotate(0deg);
     transform-origin: 100% 100%;
   }
   10% {
     transform: rotate(1deg);
   }
-  20%,
-  40%,
-  60% {
+  20%, 40%, 60% {
     transform: rotate(-0deg);
   }
-  30%,
-  50%,
-  70% {
+  30%, 50%, 70% {
     transform: rotate(2deg);
   }
   80% {
@@ -66,106 +54,77 @@
   display: flex;
 }
 
+.column-one, .column-two {
+  position: relative;
+}
+
 .column-one {
   flex: 55%;
   padding: 25vh 10px 0 clamp(50px, 8%, 200px);
-  /* trbl */
 }
+
 .column-two {
   flex: 45%;
   padding: 0 clamp(50px, 8%, 200px) 0 10px;
 }
 
-.column-one *,
-.column-two * {
-  position: relative;
-  word-wrap: break-word; /* IE 5.5-7 */
-  white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
-  white-space: pre-wrap;
-}
-
-p {
-  /* --vh: 4.19px;
-    --vw: 16px; */
+p, .pre-name {
   font-size: 1rem;
-  /* font-weight: 400; */
   line-height: 1.3;
   box-sizing: border-box;
-  /* font-weight: 700; */
 }
+
 .pre-name {
-  margin: 0;
   opacity: 0.7;
-  font-size: 1rem;
 }
+
 .p-name {
   font-size: 3rem;
   margin: 0.2em 0 0.5em 0;
   font-weight: 700;
   color: #dddddd;
-}  
-.p-first{
-  font-family: MyFontItalics, serif;  
 }
-.p-second{
-  font-family: MyFontItalics, serif; 
-  font-size: 0.9rem; 
+
+.p-first, .p-second {
+  font-family: MyFontItalics, serif;
 }
-a:link {
+
+.p-second {
+  font-size: 0.9rem;
+}
+
+a:link, a:visited {
   color: #6b96c3;
   font-weight: 700;
   text-decoration: none;
 }
 
-/* visited link */
-a:visited {
-  color: #6b96c3;
-}
-
-/* mouse over link */
 a:hover {
   color: hotpink;
 }
 
-/* selected link */
 a:active {
   color: rgb(0, 0, 193);
 }
 
 @keyframes animated_text {
-  0% {
+  0%, 100% {
     background-position: 0px 50%;
   }
   50% {
     background-position: 100% 50%;
   }
-  100% {
-    background-position: 0px 50%;
+}
+
+@media (max-width: 600px), (max-width: 510px) {
+  .parallax {
+    position: absolute;
+    width: calc(100% + 13%);
+    height: 100vh;
+    background-image: url("../../assets/images/BoyJoe.png");
+    background-size: 50vh auto;
+    animation: shake-lr 17s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+    background-repeat: no-repeat;
+    background-position: 75% 30%;
   }
-}
-@media (max-width: 600px) {
-  .parallax {
-    position: absolute;
-    width: 118%;
-    height: 100vh; 
-    background-image: url("../../assets/images/BoyJoe.png"); 
-    background-size: 50vh auto; 
-    animation: shake-lr 17s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both; 
-    /* background; */
-    background-repeat: no-repeat; 
-    background-position: 75% 30%; 
-  }  
-}
-@media (max-width: 510px) {
-  .parallax {
-    position: absolute;
-    width: 113%;
-    height: 100vh; 
-    background-image: url("../../assets/images/BoyJoe.png"); 
-    background-size: 50vh auto; 
-    animation: shake-lr 17s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both; 
-    /* background; */
-    background-repeat: no-repeat; 
-    background-position: 75% 30%; 
-  }   
 }

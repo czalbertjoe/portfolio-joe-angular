@@ -2,11 +2,9 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/images/ImJoe.png");
-  background-size: 50vh auto;
   background-repeat: no-repeat;
   background-position: 75% 30%;
-  animation: parallaxAnimation 10s ease infinite alternate; 
+  animation: parallaxAnimation 10s ease infinite alternate;
 }
 
 @keyframes parallaxAnimation {
@@ -14,34 +12,35 @@
     transform: translateY(-1vh);
   }
   50% {
-    transform: translateY(-2.2vh); 
+    transform: translateY(-2.2vh);
   }
   100% {
-    transform: translateY(-1vh); 
+    transform: translateY(-1vh);
   }
 }
+
 .info-panels {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; 
-} 
+  height: 100%;
+}
 
 .column-one {
-  width: 50%; /* Ajusta este valor según sea necesario */
+  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.button { 
+.button {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   padding: 1em;
   background-color: transparent;
 }
- 
+
 .show-modal {
   border: none;
   background-color: rgb(219, 219, 219);
@@ -63,37 +62,38 @@
 }
 
 .modal {
-  color: white;  
-  background-color: transparent;  
+  color: white;
+  background-color: transparent;
   text-align: justify;
   width: 25em;
   height: auto;
   position: absolute;
-  bottom: -50px; 
-  left: -50px; 
+  bottom: -50px;
+  left: -50px;
   padding: 1em;
   z-index: 200;
-  margin: auto; 
+  margin: auto;
   border-radius: 1.5em;
   box-shadow: 10px 10px 25px 1.2px #9f9de7;
-  font-family: MyFont, sans-serif;  
-}  
+  font-family: MyFont, sans-serif;
+}
+
 .modal p {
-  color: #ff5733; 
+  color: #ff5733;
 }
 
 .modal ul li {
-  color: #33ff57;  
+  color: #33ff57;
 }
 
 .modal1-img {
   display: none;
   margin-right: 100px;
-} 
+}
 
 .modal1Visible .modal1-img {
   display: block;
-} 
+}
 
 .header {
   display: flex;
@@ -119,73 +119,38 @@
 .close-modal:active {
   background-color: rgb(89, 89, 89);
 }
+
 @media (min-width: 601px) and (max-width: 1200px) {
   .parallax {
-    display: none;  
+    display: none;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-width: 510px) {
   .parallax {
     position: absolute;
-    width: 100%; 
-    height: 30vh;  
-    background-image: url("../../assets/images/ImJoeUp.png");
-    background-size: 30vh auto;
+    width: 100%;
+    height: 30vh;
     background-repeat: no-repeat;
-    background-position: 50% 50%;  
-    top: 320px;  
-    animation: parallaxAnimation 10s ease infinite alternate; 
+    background-position: 50% 50%;
+    top: 320px;
+    animation: parallaxAnimation 10s ease infinite alternate;
   }
+
   .modal {
-    position: relative;  
-    top: -150px;  
-    margin: 20px auto;   
-    width: 23em; 
+    position: relative;
+    top: -150px;
+    margin: 20px auto;
+    width: 23em;
     height: auto;
   }
-  .button {
-    display: flex;
-    flex-direction: column;  
-  } 
-  .show-modal {
-    margin-bottom: 20px;   
-  } 
-  
-}  
-@media (max-width: 510px) {
-  
-  .parallax {
-    position: absolute;
-    width: 100%; 
-    height: 30vh;  
-    background-image: url("../../assets/images/ImJoeUp.png");
-    background-size: 30vh auto;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;  
-    top: 320px;  
-    animation: parallaxAnimation 10s ease infinite alternate;  
-  }
-  .modal {
-    position: relative;  
-    top: -150px;  
-    margin: 20px auto;   
-    width: 20em; 
-    height: auto; 
-  }
-  .show-modal {
-    display: flex;
-    font-size: 0.8em;
-    margin-bottom: 20px;  
-    text-align: center; 
-  }  
-  .button {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;  
-  } 
-}
 
-.hidden {
-  display: none;
-} 
+  .button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .show-modal {
+    margin-bottom: 20px;
+  }
+}
