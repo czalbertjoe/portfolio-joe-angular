@@ -1,0 +1,40 @@
+<div class="row wrapper">
+  <div class="background"></div> 
+  <div *ngIf="modal1Visible || modal2Visible || modal3Visible" #elem class="parallax"></div>
+  <div class="column-one"> 
+    <div class="button">
+      <button *ngIf="!modal1Visible && !modal2Visible && !modal3Visible" class="show-modal" (click)="showModal('modal1')">Front-end Dev</button>
+      <button *ngIf="!modal1Visible && !modal2Visible && !modal3Visible" class="show-modal" (click)="showModal('modal2')">Back-end Dev</button>
+      <button *ngIf="!modal1Visible && !modal2Visible && !modal3Visible" class="show-modal" (click)="showModal('modal3')">Other dev</button>
+    </div>
+    <div class="modal" *ngIf="modal1Visible" #modal1>
+      <button class="close-modal" (click)="hideModal('modal1')">X</button><br> 
+      <p>Here's a summary of what you'll find, languages and technologies such as HTML, CSS, JavaScript, some APIs, and creativity.</p>
+      <ul>
+        <li>Retro Media Blue:-><a href="https://retro-media-blue.vercel.app/" target="_blank">https://retro-media-blue.vercel.app/</a></li>
+        <li>Just_Gentleman:-><a href="https://just-gentleman-e-commerce.vercel.app/" target="_blank">https://just-gentleman-e-commerce.vercel.app/</a></li>
+        <li>Image_Finder:-><a href="https://github.com/czalbertjoe/Image_Finder_js_unsplash" target="_blank">https://github.com/czalbertjoe/Image_Finder_js_unsplash</a></li>
+      </ul>
+    </div>
+    <div class="modal" *ngIf="modal2Visible" #modal2>
+      <button class="close-modal" (click)="hideModal('modal2')" style="background-color: transparent; color: white;">X</button><br>
+      <p>On this side you will find applications using languages and technologies such as : c#, python, sql, unity, visual studio and more...</p>
+      <ul>
+        <li>Virtual_Assistant:-><a href="https://github.com/czalbertjoe/Virtual_Assistant_-ARIA-" target="_blank">https://github.com/czalbertjoe/Virtual_Assistant_-ARIA-</a></li>
+        <li>Go 2D Space:-><a href="https://play.google.com/store/apps/details?id=com.J3ALWGames&hl=es_VE" target="_blank">https://play.google.com/store/apps/details?id=com.J3ALWGames&hl=es_VE</a></li>
+        <li>ChatGPT_with_python:-><a href="https://github.com/czalbertjoe/ChatGPT_Python" target="_blank">https://github.com/czalbertjoe/ChatGPT_Python</a></li>
+        <li>Hosting_System:-><a href="https://github.com/czalbertjoe/Hosting-System-Webfoms" target="_blank">https://github.com/czalbertjoe/Hosting-System-Webfoms</a></li>
+      </ul>
+    </div>
+    <div class="modal" *ngIf="modal3Visible" #modal3>
+      <button class="close-modal" (click)="hideModal('modal3')"style="background-color: transparent; color: white;">X</button><br>
+      <p>Here you will find some projects developed in other technologies such as Wordpress and more...</p>
+      <ul>
+        <li>Setumisma:-><a href="https://setumismacr.com/" target="_blank">https://setumismacr.com/</a></li>
+        </ul>
+    </div>
+    <div class="overlay hidden"></div>
+  </div>
+  <div class="column-two">
+  </div>
+</div>

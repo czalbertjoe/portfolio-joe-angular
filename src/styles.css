@@ -1,0 +1,136 @@
+ .background {
+    background-image: url("./assets/images/background.png");
+    content: ""; 
+    position: absolute;
+    height: 300%;
+    width: 300%;
+    left: -100%;
+    top: -100%; 
+    animation-name: grained;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(10);
+  }
+  
+  .wrapper { 
+    content: "";
+    height: 100%;
+    width: 100%; 
+    position: relative;
+    overflow: hidden;
+    color: #dddddd;
+  }
+  
+  @keyframes grained {
+    0% {
+      transform: translate(-10%, 10%);
+    }
+    10% {
+      transform: translate(-25%, 0%);
+    }
+    20% {
+      transform: translate(-30%, 10%);
+    }
+    30% {
+      transform: translate(-30%, 30%);
+    }
+    40% {
+      transform: translate();
+    }
+    50% {
+      transform: translate(-15%, 10%);
+    }
+    60% {
+      transform: translate(-20%, 20%);
+    }
+    70% {
+      transform: translate(-5%, 20%);
+    }
+    80% {
+      transform: translate(-25%, 5%);
+    }
+    90% {
+      transform: translate(-30%, 25%);
+    }
+    100% {
+      transform: translate(-10%, 10%);
+    }
+  }
+  
+  
+  /* Fonts */
+  
+  @font-face {
+    font-family: MyFont;
+    src: url(./assets/fonts/Canarina-Regular.otf);
+  }
+   
+  @font-face {
+    font-family: MyFontItalics;
+    src: url(./assets/fonts/Minicupcake.otf);
+  }
+  body {
+    margin: 0;
+    min-height: 100%;
+    background-color: transparent;
+    font-family: MyFont;
+      font-size: 1rem;
+    
+    line-height: 20px;
+  }
+   
+  .overlay {
+    background-color: transparent;
+  }
+   
+@keyframes buttonTransition {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+ 
+  
+  @keyframes textTransition {
+  
+    
+    from {
+        transform: scale(0.97);
+    }
+    to {
+        transform: scale(1);
+    }
+  }
+  
+  
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1px;
+    opacity: 0.3;
+  }
+  
+  .templink {
+    fill: none;
+    stroke: red;
+    stroke-width: 3px;
+    
+  }
+  
+  .ghostCircle.show {
+    display: block;
+  }
+  
+  .ghostCircle,
+  .activeDrag .ghostCircle {
+    display: none;
+  }
+  text {
+    fill: #DDDDDD;
+  }
+  
+  
+  
+  
