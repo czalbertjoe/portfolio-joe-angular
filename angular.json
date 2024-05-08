@@ -6,7 +6,7 @@
     "portfolio-joe-angular": {
       "projectType": "application",
       "schematics": {},
-      "root": "",
+      "root": "src/app",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
